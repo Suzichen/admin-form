@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { BootstrapModalModule } from "ngx-bootstrap-modal";
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -11,6 +12,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     BootstrapModalModule.forRoot({})
   ],
   providers: [],

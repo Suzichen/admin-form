@@ -13,7 +13,10 @@ export class AppComponent {
     public age:string
     public nowIndex:number
     public userData:any = [
-        {username: "苏子晨",age: "18"}
+        {username: "苏子晨",age: "18"},
+        {username: "小名",age: "12"},
+        {username: "苏",age: "13"},
+        {username: "黑",age: "19"}
     ]
     constructor(
         public dialogService:DialogService
@@ -26,9 +29,16 @@ export class AppComponent {
         })
         this.username = '';
         this.age = '';
-        console.log(this.userData)
     }
     
+    delete() {
+        if(this.nowIndex === -1) {
+            this.userData = [];
+        } else {
+            this.userData.splice(this.nowIndex, 1)
+        }
+    }
+
     showConfirm() {
         this.dialogService.confirm('提醒', '确认要删除吗？', {
             // 可选项，可以对部分参数重写
@@ -37,8 +47,7 @@ export class AppComponent {
         }).then((result: boolean) => {
             // result
             if(result === false) return;
-            this.username = "haha"
-            this.age = "safsa"
+            this.delete();
         });
     }
 }

@@ -31,16 +31,13 @@
             <td>{{item.age}}</td>
             <td>
             <button class="btn btn-danger btn-sm" 
-                data-toggle="modal" data-target="#layer"
-                v-on:click="nowIndex = index">删除</button><!--(重要)获取到当前行数的索引值-->
-<!--data-toggle="modal" data-target="#layer":一组属性，用于切换出id为layer的模态框-->
+                (click)="nowIndex = i" (click)="showConfirm()">删除</button>
             </td>
         </tr>
         <tr v-show="myData.length != 0">
             <td colspan="4" class="text-right">
                 <button class="btn btn-danger btn-sm"
-                    data-toggle="modal" data-target="#layer"
-                    (click)="showConfirm()">删除全部</button>                                     
+                 (click)="nowIndex = -1" (click)="showConfirm()">删除全部</button>                                     
             </td>
         </tr>
         <tr class="text-center text-muted" v-show="myData.length==0">

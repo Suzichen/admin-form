@@ -12,7 +12,9 @@ export class AppComponent {
     public username:string
     public age:string
     public nowIndex:number
-    public userData:any = []
+    public userData:any = [
+        {username: "苏子晨",age: "18"}
+    ]
     constructor(
         public dialogService:DialogService
     ) {}

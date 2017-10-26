@@ -13,7 +13,10 @@ export class AppComponent {
     public age:string
     public nowIndex:number
     public userData:any = [
-        {username: "Angular",age: "4.X"}
+        {username: "Angular",age: "4.X"},
+        {username: "BootstrapCss",age: "3.3.7"},
+        {username: "ngx-bootstrap-modal",age: "1.0"},
+        {username: "Jquery",age: "none"}
     ]
     constructor(
         public dialogService:DialogService

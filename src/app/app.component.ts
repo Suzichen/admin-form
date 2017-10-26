@@ -13,16 +13,14 @@ export class AppComponent {
     public age:string
     public nowIndex:number
     public userData:any = [
-        {username: "苏子晨",age: "18"},
-        {username: "小名",age: "12"},
-        {username: "苏",age: "13"},
-        {username: "黑",age: "19"}
+        {username: "Angular",age: "4.X"}
     ]
     constructor(
         public dialogService:DialogService
     ) {}
 
     add() {
+        if(!this.username || !this.age) return;
         this.userData.push({
             username: this.username,
             age: this.age
